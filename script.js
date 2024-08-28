@@ -1,3 +1,4 @@
+//aanan
 const gameBoard = document.getElementById('game-board');
 const wordLengthSelect = document.getElementById('word-length');
 const newGameButton = document.getElementById('new-game');
