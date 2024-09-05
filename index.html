@@ -7,22 +7,79 @@
     <title>Wordle</title>
 </head>
 <body>
-    
     <div class="game-container">
         <h1>Wordle</h1>
         <div class="game-settings">
-            <label for="word-length">Word Length:</label>
-            <select id="word-length">
-                <option value="4">4 letters</option>
-                <option value="5" selected>5 letters</option>
-                <option value="6">6 letters</option>
-                <option value="7">7 letters</option>
-            </select>
-            <button id="new-game">New Game</button>
+            <label for="word-length" class="settings-label">Word Length:</label>
+            <div class="settings-selector">
+                <select id="word-length">
+                    <option value="3">3 letters</option>
+                    <option value="4" selected>4 letters</option>
+                    <option value="5">5 letters</option>
+                    <option value="6">6 letters</option>
+                </select>
+                <button id="new-game">New Game</button>
+            </div>
         </div>
         <div id="game-board"></div>
+        <div id="keyboard">
+            <div class="key-row">
+                <div class="key">Q</div>
+                <div class="key">W</div>
+                <div class="key">E</div>
+                <div class="key">R</div>
+                <div class="key">T</div>
+                <div class="key">Y</div>
+                <div class="key">U</div>
+                <div class="key">I</div>
+                <div class="key">O</div>
+                <div class="key">P</div>
+            </div>
+            <div class="key-row">
+                <div class="key">A</div>
+                <div class="key">S</div>
+                <div class="key">D</div>
+                <div class="key">F</div>
+                <div class="key">G</div>
+                <div class="key">H</div>
+                <div class="key">J</div>
+                <div class="key">K</div>
+                <div class="key">L</div>
+            </div>
+            <div class="key-row">
+                <div class="key" id="backspace">⌫</div>
+                <div class="key">Z</div>
+                <div class="key">X</div>
+                <div class="key">C</div>
+                <div class="key">V</div>
+                <div class="key">B</div>
+                <div class="key">N</div>
+                <div class="key">M</div>
+                <div class="key" id="enter">Enter</div>
+            </div>
+        </div>
     </div>
 
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h2>Congratulations!</h2>
+            <p>You have guessed the word correctly!</p>
+            <button id="new-game-from-win">New Game</button>
+        </div>
+    </div>
+
+    <div id="lose-modal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over</h2>
+            <p>Sorry, you couldn't guess the word. Better luck next time!</p>
+            <button id="new-game-from-lose">New Game</button>
+        </div>
+    </div>
+    
+    <script src="words/three_letters.js"></script>
+    <script src="words/four_letters.js"></script>
+    <script src="words/five_letters.js"></script>
+    <script src="words/six_letters.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
